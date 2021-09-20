@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="10" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">top1</Data></Cell>
+			<Cell><Data ss:Type="String">top3</Data></Cell>
+			<Cell><Data ss:Type="String">top5</Data></Cell>
+			<Cell><Data ss:Type="String">top10</Data></Cell>
+			<Cell><Data ss:Type="String">top15</Data></Cell>
+			<Cell><Data ss:Type="String">top20</Data></Cell>
+			<Cell><Data ss:Type="String">top25</Data></Cell>
+			<Cell><Data ss:Type="String">top30</Data></Cell>
+			<Cell><Data ss:Type="String">after</Data></Cell>
+			<Cell><Data ss:Type="String">sim</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="Number">11</Data></Cell>
+			<Cell><Data ss:Type="Number">17</Data></Cell>
+			<Cell><Data ss:Type="Number">25</Data></Cell>
+			<Cell><Data ss:Type="Number">34</Data></Cell>
+			<Cell><Data ss:Type="Number">44</Data></Cell>
+			<Cell><Data ss:Type="Number">50</Data></Cell>
+			<Cell><Data ss:Type="Number">60</Data></Cell>
+			<Cell><Data ss:Type="Number">69</Data></Cell>
+			<Cell><Data ss:Type="Number">99</Data></Cell>
+			<Cell><Data ss:Type="String">LDSD</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="Number">14</Data></Cell>
+			<Cell><Data ss:Type="Number">31</Data></Cell>
+			<Cell><Data ss:Type="Number">43</Data></Cell>
+			<Cell><Data ss:Type="Number">57</Data></Cell>
+			<Cell><Data ss:Type="Number">70</Data></Cell>
+			<Cell><Data ss:Type="Number">76</Data></Cell>
+			<Cell><Data ss:Type="Number">79</Data></Cell>
+			<Cell><Data ss:Type="Number">82</Data></Cell>
+			<Cell><Data ss:Type="Number">100</Data></Cell>
+			<Cell><Data ss:Type="String">LDSD_LOD</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>
