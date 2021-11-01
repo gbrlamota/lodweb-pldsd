@@ -53,21 +53,23 @@ public class WeighingSimilarityCalculator implements Runnable
 					continue;
 				}
 
-				boolean thereIsLiteral = false; //forcing this to not execute 
-				boolean thereIsRESIM = true; //forcing this to not execute 
+				//boolean thereIsLiteral = false; //forcing this to not execute
+				//boolean thereIsRESIM = true; //forcing this to not execute
 				boolean thereIsPLDSD = true;
 				boolean thereIsLDSD = true;
+				boolean thereIsSPLDSD = true;
+				boolean thereIsSLDSD = true;
 
 				DBFunctions dbFunctions = Weighing.getDatabaseConnection();
 				synchronized(dbFunctions)
 				{
-					thereIsLiteral = dbFunctions.checkSimilarity(movie1, movie2, ESimilarity.LITERAL.toString());
+					//thereIsLiteral = dbFunctions.checkSimilarity(movie1, movie2, ESimilarity.LITERAL.toString());
 					//thereIsRESIM = dbFunctions.checkSimilarity(movie1, movie2, ESimilarity.RESIM.toString());
 					//thereIsPLDSD = dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.PLDSD.toString(), user);
 					//thereIsLDSD = dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.LDSD.toString(), user);
 				}
 
-				double teste1 = 0d;
+				/*double teste1 = 0d;
 				if (!thereIsLiteral)
 				{
 					teste1 = LiteralSim.calculateSimilarity(movie1, movie2);
@@ -82,7 +84,7 @@ public class WeighingSimilarityCalculator implements Runnable
 				else
 				{
 					teste1 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.LITERAL.toString());
-				}
+				}*/
 	
 				double teste2 = 0d;
 				if (!thereIsPLDSD)
@@ -96,6 +98,25 @@ public class WeighingSimilarityCalculator implements Runnable
 					{
 						if (!dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.PLDSD.toString(), user))
 							dbFunctions.insertPersonalizedSemanticDistance(movie1, movie2, ESimilarity.PLDSD.toString(), teste2, user);
+					}
+				}
+				else
+				{
+					teste2 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.PLDSD.toString(), user);
+				}
+
+				double teste5 = 0d;
+				if (!thereIsSPLDSD)
+				{
+
+					//TODO checar se eh necessario mesmo subtrair de um, se o LDSD ja esta dando a resposta como distancia??
+					//pq queremos a resposta como similaridade!
+					teste2 = 1 - SummarizedPLDSD.PLDSDweighted(movie1, movie2,user);
+					message.append("PLDSD: " + teste2 + "\n");
+					synchronized(dbFunctions)
+					{
+						if (!dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.PLDSD_S.toString(), user))
+							dbFunctions.insertPersonalizedSemanticDistance(movie1, movie2, ESimilarity.PLDSD_S.toString(), teste2, user);
 					}
 				}
 				else
@@ -122,8 +143,28 @@ public class WeighingSimilarityCalculator implements Runnable
 				{
 					teste3 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.LDSD.toString(), user);
 				}
-				
+
 				double teste4 = 0d;
+				if (!thereIsSLDSD)
+				{
+
+					//TODO checar se eh necessario mesmo subtrair de um, se o LDSD ja esta dando a resposta como distancia??
+					//pq queremos a resposta como similaridade!
+					teste4 = 1 - SummarizedLDSD.LDSDweighted(movie1, movie2);
+					message.append("LDSD: " + teste4 + "\n");
+					//TODO:tirar essa segunda verificacao com if?
+					synchronized(dbFunctions)
+					{
+						if (!dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.LDSD_S.toString(), user))
+							dbFunctions.insertPersonalizedSemanticDistance(movie1, movie2, ESimilarity.LDSD_S.toString(), teste3, user);
+					}
+				}
+				else
+				{
+					teste3 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.LDSD_S.toString(), user);
+				}
+				
+				/*double teste4 = 0d;
 				if (!thereIsRESIM)
 				{
 					ResourceSimilarityMeasure rsmForDBpedia = new ResourceSimilarityMeasure(PropertyRestriction.SamePropertyPath,
@@ -144,7 +185,7 @@ public class WeighingSimilarityCalculator implements Runnable
 				else
 				{
 					//teste2 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.RESIM.toString());
-				}
+				}*/
 				
 				System.out.print(message.toString());
 			}
