@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import database.DBFunctions;
-import io.github.parklize.conf.RESIMConf.PropertyRestriction;
-import io.github.parklize.measure.ResourceSimilarityMeasure;
+/*import io.github.parklize.conf.RESIMConf.PropertyRestriction;
+import io.github.parklize.measure.ResourceSimilarityMeasure;*/
 import model.User;
-import ufba.br.resim.similarity.CalculateResim;
-import ufba.br.resim.test.Util;;
+/*import ufba.br.resim.similarity.CalculateResim;
+import ufba.br.resim.test.Util;;*/
 
 public class WeighingSimilarityCalculator implements Runnable
 {
@@ -86,8 +86,8 @@ public class WeighingSimilarityCalculator implements Runnable
 					teste1 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.LITERAL.toString());
 				}*/
 	
-				double teste2 = 0d;
-				if (!thereIsPLDSD)
+				/*double teste2 = 0d;
+				if (thereIsPLDSD)
 				{	
 					
 					//TODO checar se eh necessario mesmo subtrair de um, se o LDSD ja esta dando a resposta como distancia??
@@ -103,29 +103,29 @@ public class WeighingSimilarityCalculator implements Runnable
 				else
 				{
 					teste2 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.PLDSD.toString(), user);
-				}
+				}*/
 
-				double teste5 = 0d;
+				/*double teste5 = 0d;
 				if (!thereIsSPLDSD)
 				{
 
 					//TODO checar se eh necessario mesmo subtrair de um, se o LDSD ja esta dando a resposta como distancia??
 					//pq queremos a resposta como similaridade!
-					teste2 = 1 - SummarizedPLDSD.PLDSDweighted(movie1, movie2,user);
-					message.append("PLDSD: " + teste2 + "\n");
+					teste5 = 1 - SummarizedPLDSD.PLDSDweighted(movie1, movie2,user);
+					message.append("PLDSD: " + teste5 + "\n");
 					synchronized(dbFunctions)
 					{
-						if (!dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.PLDSD_S.toString(), user))
-							dbFunctions.insertPersonalizedSemanticDistance(movie1, movie2, ESimilarity.PLDSD_S.toString(), teste2, user);
+						if (!dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.PLDSD_100.toString(), user))
+							dbFunctions.insertPersonalizedSemanticDistance(movie1, movie2, ESimilarity.PLDSD_100.toString(), teste5, user);
 					}
 				}
 				else
 				{
-					teste2 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.PLDSD.toString(), user);
-				}
+					teste5 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.PLDSD_535.toString(), user);
+				}*/
 	
-				double teste3 = 0d;
-				if (!thereIsLDSD)
+				/*double teste3 = 0d;
+				if (thereIsLDSD)
 				{	
 						
 					//TODO checar se eh necessario mesmo subtrair de um, se o LDSD ja esta dando a resposta como distancia??
@@ -142,10 +142,10 @@ public class WeighingSimilarityCalculator implements Runnable
 				else
 				{
 					teste3 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.LDSD.toString(), user);
-				}
+				}*/
 
 				double teste4 = 0d;
-				if (!thereIsSLDSD)
+				if (thereIsSLDSD)
 				{
 
 					//TODO checar se eh necessario mesmo subtrair de um, se o LDSD ja esta dando a resposta como distancia??
@@ -155,13 +155,13 @@ public class WeighingSimilarityCalculator implements Runnable
 					//TODO:tirar essa segunda verificacao com if?
 					synchronized(dbFunctions)
 					{
-						if (!dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.LDSD_S.toString(), user))
-							dbFunctions.insertPersonalizedSemanticDistance(movie1, movie2, ESimilarity.LDSD_S.toString(), teste3, user);
+						if (!dbFunctions.checkPersonalizedSimilarity(movie1, movie2, ESimilarity.LDSD_500.toString(), user))
+							dbFunctions.insertPersonalizedSemanticDistance(movie1, movie2, ESimilarity.LDSD_500.toString(), teste4, user);
 					}
 				}
 				else
 				{
-					teste3 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.LDSD_S.toString(), user);
+					teste4 = dbFunctions.getSimilarityByMethod(movie1, movie2, ESimilarity.LDSD_500.toString(), user);
 				}
 				
 				/*double teste4 = 0d;
