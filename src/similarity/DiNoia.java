@@ -56,7 +56,7 @@ public class DiNoia {
         Connection conn = DBConnection.getConnection();
         PreparedStatement ps = null;
 
-        ps = conn.prepareStatement("SELECT * FROM summarization.abstat WHERE avgS > 1");
+        ps = conn.prepareStatement("SELECT * FROM summarization_music.abstat_music WHERE avgS > 1");
         ResultSet rs = ps.executeQuery();
         Integer i = 0;
         while (rs.next()) {
@@ -114,10 +114,10 @@ public class DiNoia {
         PreparedStatement ps = null;
 
         for(int i = sorted_map.size() - 1; i >= sorted_map.size() - k; i--) {
-            if(i == 534) {
+            if(i == 3741) {
                 System.out.println("Entrei");
             }
-            String query =String.format("UPDATE summarization.propriedades_distintas SET `active_535` = true WHERE property = \"%s\"", sorted_map.get(i).getKey()) ;
+            String query =String.format("UPDATE summarization_music.propriedades_distintas_music SET `active_high` = true WHERE property = \"%s\"", sorted_map.get(i).getKey()) ;
             System.out.println(query);
             ps = conn.prepareStatement(query);
             boolean rs = ps.execute();
@@ -133,7 +133,7 @@ public class DiNoia {
     public List<String> getSelectedFeatures() throws SQLException {
         HashMap<String, Integer> elements = selectDistinctP(filterBy());
         List<Map.Entry<String, Integer>> sorted_map = sortByValue(elements);
-        return selectFeatures(535, sorted_map);
+        return selectFeatures(3741, sorted_map);
     }
 
     public static void main(String[] args) throws SQLException {
@@ -141,6 +141,6 @@ public class DiNoia {
         System.out.println("Primeiro passo");
         List<Map.Entry<String, Integer>> sorted_map = sortByValue(elements);
         System.out.println("Segundo passo");
-        selectFeatures(535, sorted_map);
+        selectFeatures(3741, sorted_map);
     }
 }

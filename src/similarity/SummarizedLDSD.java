@@ -38,13 +38,17 @@ public class SummarizedLDSD {
         ResultSet rs;
         for (Resource resource : resources) {
             try {
-                String query = String.format("SELECT * FROM summarization.distinct_property WHERE property = \"%s\"", resource);
+                String query = String.format("SELECT * FROM summarization_music.propriedades_distintas_music WHERE property = \"%s\"", resource);
                 ps = conn.prepareStatement(query);
                 rs = ps.executeQuery();
                 //Testing k = 100
-                System.out.println(String.format("%s %s %s", resource, rs.getString(1), rs.getString(2)));
-                if (rs.getString(6) == "1") {
-                    sum = sum + ((resources.size() / (1 + Math.log(SparqlWalk.countTotalDirectLinksFromResourceAndProperty(resourceA, resource.getURI())))));
+                //System.out.println(String.format("%s %s %s", resource, rs.getString(1), rs.getString(2)));
+                if (rs.next()) {
+                    if (rs.getString(3) != null) {
+                        sum = sum + ((resources.size() / (1 + Math.log(SparqlWalk.countTotalDirectLinksFromResourceAndProperty(resourceA, resource.getURI())))));
+                    }
+                } else {
+                    continue;
                 }
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
@@ -71,14 +75,19 @@ public class SummarizedLDSD {
         for (Resource resource : resources) {
 
             try {
-                String query = String.format("SELECT * FROM summarization.distinct_property WHERE property = \"%s\"", resource);
+                String query = String.format("SELECT * FROM summarization_music.propriedades_distintas_music WHERE property = \"%s\"", resource);
                 ps = conn.prepareStatement(query);
                 rs = ps.executeQuery();
-                //Testing k = 100
-                System.out.println(String.format("%s %s %s", resource, rs.getString(1), rs.getString(2)));
-                if (rs.getString(6) == "1") {
-                    sum = sum + (SparqlWalk.getCountIndirectOutgoingLinkFrom2ResourcesAndLink(resourceA, resourceB, resource.getURI()) / (1 + Math.log(SparqlWalk.countIndirectOutgoingLinksFromResourceAndLink(resourceA, resource.getURI()))));
+                if(rs.next()){
+                    //Testing k = 100
+                    //System.out.println(String.format("%s %s %s", resource, rs.getString(1), rs.getString(2)));
+                    if (rs.getString(3) != null) {
+                        sum = sum + (SparqlWalk.getCountIndirectOutgoingLinkFrom2ResourcesAndLink(resourceA, resourceB, resource.getURI()) / (1 + Math.log(SparqlWalk.countIndirectOutgoingLinksFromResourceAndLink(resourceA, resource.getURI()))));
+                    }
+                } else {
+                    continue;
                 }
+
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
@@ -104,13 +113,17 @@ public class SummarizedLDSD {
         ResultSet rs;
         for (Resource resource : resources) {
             try {
-                String query = String.format("SELECT * FROM summarization.distinct_property WHERE property = \"%s\"", resource);
+                String query = String.format("SELECT * FROM summarization_music.propriedades_distintas_music WHERE property = \"%s\"", resource);
                 ps = conn.prepareStatement(query);
                 rs = ps.executeQuery();
                 //Testing k = 100
-                System.out.println(String.format("%s %s %s", resource, rs.getString(1), rs.getString(2)));
-                if (rs.getString(6) == "1") {
-                    sum = sum + (SparqlWalk.getCountIndirectIncomingLinkFrom2ResourcesAndLink(resourceA, resourceB, resource.getURI()) / (1 + Math.log(SparqlWalk.countIndirectIncomingLinksFromResourceAndLink(resourceA, resource.getURI()))));
+                //System.out.println(String.format("%s %s %s", resource, rs.getString(1), rs.getString(2)));
+                if(rs.next()) {
+                    if (rs.getString(3) != null) {
+                        sum = sum + (SparqlWalk.getCountIndirectIncomingLinkFrom2ResourcesAndLink(resourceA, resourceB, resource.getURI()) / (1 + Math.log(SparqlWalk.countIndirectIncomingLinksFromResourceAndLink(resourceA, resource.getURI()))));
+                    }
+                } else {
+                    continue;
                 }
             } catch (SQLException throwables) {
                 throwables.printStackTrace();

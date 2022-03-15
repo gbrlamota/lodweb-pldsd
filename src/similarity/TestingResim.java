@@ -1,7 +1,7 @@
 package similarity;
 
-import io.github.parklize.measure.*;
-import io.github.parklize.conf.RESIMConf.PropertyRestriction;
+/*import io.github.parklize.measure.*;
+import io.github.parklize.conf.RESIMConf.PropertyRestriction;*/
 import java.util.*;
 
 public class TestingResim {
@@ -9,7 +9,7 @@ public class TestingResim {
 	public static void main(String[] args) {
 		
 		// DBpedia settings - without prefix list format
-		ResourceSimilarityMeasure rsmForDBpedia = new ResourceSimilarityMeasure(
+		/*ResourceSimilarityMeasure rsmForDBpedia = new ResourceSimilarityMeasure(
 							PropertyRestriction.SamePropertyPath,
 							"http://dbpedia.org/sparql", 
 							null, null, 
@@ -18,7 +18,7 @@ public class TestingResim {
 							null, null);	
 		
 		System.out.println(
-		rsmForDBpedia.getSimilarity("<http://dbpedia.org/resource/Hong_Kong>", "<http://dbpedia.org/resource/Singapore>", 2));
+		rsmForDBpedia.getSimilarity("<http://dbpedia.org/resource/Hong_Kong>", "<http://dbpedia.org/resource/Singapore>", 2));*/
 
 	}
 

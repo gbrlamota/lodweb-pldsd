@@ -49,7 +49,7 @@ public abstract class IDatabaseConstants {
 	/**
 	 * 
 	 */
-	public static String DB_PASSWORD = "root";
+	public static String DB_PASSWORD = "";
 	//public String DB_PASSWORD = "BHU*nji9";
 	//public static String DB_PASSWORD = "durao";
 
