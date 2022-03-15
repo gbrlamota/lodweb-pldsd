@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import database.DBFunctions;
-import io.github.parklize.conf.RESIMConf.PropertyRestriction;
+/*import io.github.parklize.conf.RESIMConf.PropertyRestriction;
 import io.github.parklize.measure.ResourceSimilarityMeasure;
 import ufba.br.resim.similarity.CalculateResim;
-import ufba.br.resim.test.Util;;
+import ufba.br.resim.test.Util;;*/
 
 public class TestingSimilarityCalculator implements Runnable
 {
@@ -28,12 +28,12 @@ public class TestingSimilarityCalculator implements Runnable
 		// DBpedia list of additional no literal properties for film domain
 		// Only needed for Resim
 		List<String> additionalPropertyList_dbpedia = new ArrayList<String>();
-		try {
+		/*try {
 			additionalPropertyList_dbpedia = Util.getAdditionalPropertyList();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		while(!movies[0].equals("") && !movies[1].equals(""))
 		{
@@ -106,7 +106,7 @@ public class TestingSimilarityCalculator implements Runnable
 
 					
 					//teste3 = rsmForDBpedia.getSimilarity("<"+movie1+">", "<"+movie2+">", 2);
-					teste3 = CalculateResim.getResimBetweenTwoResources("<"+movie1+">", "<"+movie2+">", additionalPropertyList_dbpedia);
+					//teste3 = CalculateResim.getResimBetweenTwoResources("<"+movie1+">", "<"+movie2+">", additionalPropertyList_dbpedia);
 					message.append("RESIM: " + teste3 + "\n");
 
 					synchronized(dbFunctions)

@@ -56,7 +56,7 @@ public class DiNoia {
         Connection conn = DBConnection.getConnection();
         PreparedStatement ps = null;
 
-        ps = conn.prepareStatement("SELECT * FROM summarization.abstat WHERE avgS > 1");
+        ps = conn.prepareStatement("SELECT * FROM summarization_music.abstat_music WHERE avgS > 1");
         ResultSet rs = ps.executeQuery();
         Integer i = 0;
         while (rs.next()) {
@@ -114,23 +114,26 @@ public class DiNoia {
         PreparedStatement ps = null;
 
         for(int i = sorted_map.size() - 1; i >= sorted_map.size() - k; i--) {
-            String query =String.format("UPDATE summarization.distinct_property SET `active_500` = true WHERE property = \"%s\"", sorted_map.get(i).getKey()) ;
+            if(i == 3741) {
+                System.out.println("Entrei");
+            }
+            String query =String.format("UPDATE summarization_music.propriedades_distintas_music SET `active_high` = true WHERE property = \"%s\"", sorted_map.get(i).getKey()) ;
             System.out.println(query);
-            //String string = "INSERT INTO summarization.dis (distinct_100) VALUES (OK) WHERE property=" + sorted_map.get(i).getKey();
             ps = conn.prepareStatement(query);
             boolean rs = ps.execute();
+            System.out.println(sorted_map.get(i).getKey() + " " + i);
             features.add(sorted_map.get(i).getKey());
         }
         ps.close();
         conn.close();
-        System.out.println(features);
+
         return features;
     }
 
     public List<String> getSelectedFeatures() throws SQLException {
         HashMap<String, Integer> elements = selectDistinctP(filterBy());
         List<Map.Entry<String, Integer>> sorted_map = sortByValue(elements);
-        return selectFeatures(500, sorted_map);
+        return selectFeatures(3741, sorted_map);
     }
 
     public static void main(String[] args) throws SQLException {
@@ -138,6 +141,6 @@ public class DiNoia {
         System.out.println("Primeiro passo");
         List<Map.Entry<String, Integer>> sorted_map = sortByValue(elements);
         System.out.println("Segundo passo");
-        selectFeatures(500, sorted_map);
+        selectFeatures(3741, sorted_map);
     }
 }

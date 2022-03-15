@@ -58,7 +58,7 @@ public class Weighing
 	private static int totalMovies2;
 	private static int currentPosition1;
 	private static int currentPosition2;
-	private static User user = new User(1048);		//1048 = 40 ratings; 6 = 71 ratings; 8=130 rat; 19=246 rat..
+	private static User user = new User(2072);		//1048 = 40 ratings; 6 = 71 ratings; 8=130 rat; 19=246 rat..
 
 	public static User getUser() {
 		return user;
@@ -76,7 +76,7 @@ public class Weighing
 		
 		runSimilarities();
 		
-		//calculateEvaluationMeasure(ESimilarity.PLDSD);
+		calculateEvaluationMeasure(ESimilarity.PLDSD);
 		
 		//calculateTTest();
 
@@ -125,7 +125,7 @@ public class Weighing
 		
 		//building a set of 5 stars movies
 		for (MovieRating rating : movieRatingList) {
-			if (rating.getRating() == 5) {
+			if (rating.getRating() >= 2) {
 				if (count == 0) { //first movie returned will be the base movie
 					baseMovie = rating.getMovie().getUri();
 					
@@ -221,98 +221,207 @@ public class Weighing
 		}	*/
 		
 		//building the candidate movies list
-		candidateMovies.add("http://dbpedia.org/resource/The_Godfather");
-		candidateMovies.add("http://dbpedia.org/resource/P.S._I_Love_You_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Donnie_Darko");
-		candidateMovies.add("http://dbpedia.org/resource/Tron");
-		candidateMovies.add("http://dbpedia.org/resource/Grown_Ups_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/V_for_Vendetta_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/2012_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Scarface_(1983_film)");
-		candidateMovies.add("http://dbpedia.org/resource/The_Hobbit:_An_Unexpected_Journey");
-		candidateMovies.add("http://dbpedia.org/resource/The_Notebook");
-		candidateMovies.add("http://dbpedia.org/resource/Jackass:_The_Movie");
-		candidateMovies.add("http://dbpedia.org/resource/Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl");
-		candidateMovies.add("http://dbpedia.org/resource/Dirty_Dancing");
-		candidateMovies.add("http://dbpedia.org/resource/Forrest_Gump");
-		candidateMovies.add("http://dbpedia.org/resource/Titanic_(1997_film)");
-		candidateMovies.add("http://dbpedia.org/resource/300_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Pineapple_Express_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Where_the_Wild_Things_Are_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Scott_Pilgrim_vs._the_World");
-		candidateMovies.add("http://dbpedia.org/resource/Dear_John_(2010_film)");
-		candidateMovies.add("http://dbpedia.org/resource/The_Princess_Bride_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Twilight_(2008_film)");
-		candidateMovies.add("http://dbpedia.org/resource/The_Last_Song_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Vampires_Suck");
-		candidateMovies.add("http://dbpedia.org/resource/The_Karate_Kid");
-		candidateMovies.add("http://dbpedia.org/resource/Gladiator_(2000_film)");
-		candidateMovies.add("http://dbpedia.org/resource/The_Shawshank_Redemption");
-		candidateMovies.add("http://dbpedia.org/resource/The_Nightmare_Before_Christmas");
-		candidateMovies.add("http://dbpedia.org/resource/Edward_Scissorhands");
-		candidateMovies.add("http://dbpedia.org/resource/Slumdog_Millionaire");
-		candidateMovies.add("http://dbpedia.org/resource/Goodfellas");
-		candidateMovies.add("http://dbpedia.org/resource/The_Proposal_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/The_Black_Swan_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Eat_Pray_Love");
-		candidateMovies.add("http://dbpedia.org/resource/3_Idiots");
-		candidateMovies.add("http://dbpedia.org/resource/Across_the_Universe_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/A_Clockwork_Orange_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Fear_and_Loathing_in_Las_Vegas_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/The_Last_Airbender");
-		candidateMovies.add("http://dbpedia.org/resource/Wanted_(2009_film)");
-		candidateMovies.add("http://dbpedia.org/resource/The_Lovely_Bones_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Requiem_for_a_Dream");
-		candidateMovies.add("http://dbpedia.org/resource/Troy_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Labyrinth_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Happy_Gilmore");
-		candidateMovies.add("http://dbpedia.org/resource/Remember_the_Titans");
-		candidateMovies.add("http://dbpedia.org/resource/District_9");
-		candidateMovies.add("http://dbpedia.org/resource/50_First_Dates");
-		candidateMovies.add("http://dbpedia.org/resource/The_Other_Guys");
-		candidateMovies.add("http://dbpedia.org/resource/Pan's_Labyrinth");
-		candidateMovies.add("http://dbpedia.org/resource/Knocked_Up");
-		candidateMovies.add("http://dbpedia.org/resource/Home_Alone");
-		candidateMovies.add("http://dbpedia.org/resource/Letters_to_Juliet");
-		candidateMovies.add("http://dbpedia.org/resource/The_Pursuit_of_Happyness");
-		candidateMovies.add("http://dbpedia.org/resource/Next_Friday");
-		candidateMovies.add("http://dbpedia.org/resource/Dr._Horrible's_Sing-Along_Blog");
-		candidateMovies.add("http://dbpedia.org/resource/Takers");
-		candidateMovies.add("http://dbpedia.org/resource/Taken_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Love_Actually");
-		candidateMovies.add("http://dbpedia.org/resource/The_Goonies");
-		candidateMovies.add("http://dbpedia.org/resource/Coraline_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Hancock_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/10_Things_I_Hate_About_You");
-		candidateMovies.add("http://dbpedia.org/resource/Hot_Fuzz");
-		candidateMovies.add("http://dbpedia.org/resource/The_American_Beauty");
-		candidateMovies.add("http://dbpedia.org/resource/A_Beautiful_Mind_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/White_Chicks");
-		candidateMovies.add("http://dbpedia.org/resource/Rocky");
-		candidateMovies.add("http://dbpedia.org/resource/Interview_with_the_Vampire_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Jurassic_Park");
-		candidateMovies.add("http://dbpedia.org/resource/The_Curious_Case_of_Benjamin_Button_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Megamind");
-		candidateMovies.add("http://dbpedia.org/resource/The_Big_Lebowski");
-		candidateMovies.add("http://dbpedia.org/resource/Friday_After_Next");
-		candidateMovies.add("http://dbpedia.org/resource/The_Butterfly_Effect");
-		candidateMovies.add("http://dbpedia.org/resource/The_Ugly_Truth");
-		candidateMovies.add("http://dbpedia.org/resource/Alien_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Transformers:_Revenge_of_the_Fallen");
-		candidateMovies.add("http://dbpedia.org/resource/Ace_Ventura:_Pet_Detective");
-		candidateMovies.add("http://dbpedia.org/resource/The_Color_Purple_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/The_Yes_Man");
-		candidateMovies.add("http://dbpedia.org/resource/Clash_of_the_Titans_(2010_film)");
-		candidateMovies.add("http://dbpedia.org/resource/Full_Metal_Jacket");
-		candidateMovies.add("http://dbpedia.org/resource/Trainspotting_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Gran_Torino");
-		candidateMovies.add("http://dbpedia.org/resource/Big_Fish");
-		candidateMovies.add("http://dbpedia.org/resource/Fireproof_(film)");
-		candidateMovies.add("http://dbpedia.org/resource/Forgetting_Sarah_Marshall");
-		candidateMovies.add("http://dbpedia.org/resource/Law_Abiding_Citizen");
-		candidateMovies.add("http://dbpedia.org/resource/Billy_Madison");
-		candidateMovies.add("http://dbpedia.org/resource/Dinner_for_Schmucks");
-		candidateMovies.add("http://dbpedia.org/resource/The_Book_of_Eli");
+		candidateMovies.add("http://dbpedia.org/resource/AC/DC");
+		candidateMovies.add("http://dbpedia.org/resource/Queen_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/Avril_Lavigne");
+		candidateMovies.add("http://dbpedia.org/resource/Red_Hot_Chili_Peppers");
+		candidateMovies.add("http://dbpedia.org/resource/Shakira");
+		candidateMovies.add("http://dbpedia.org/resource/Alicia_Keys");
+		candidateMovies.add("http://dbpedia.org/resource/Nickelback");
+		candidateMovies.add("http://dbpedia.org/resource/Akon");
+		candidateMovies.add("http://dbpedia.org/resource/The_Black_Eyed_Peas");
+		candidateMovies.add("http://dbpedia.org/resource/Slipknot_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/Jason_Mraz");
+		candidateMovies.add("http://dbpedia.org/resource/Guns_N'_Roses");
+		candidateMovies.add("http://dbpedia.org/resource/Bon_Jovi");
+		candidateMovies.add("http://dbpedia.org/resource/Jay-Z");
+		candidateMovies.add("http://dbpedia.org/resource/The_Killers");
+		candidateMovies.add("http://dbpedia.org/resource/Foo_Fighters");
+		candidateMovies.add("http://dbpedia.org/resource/Bruno_Mars");
+		candidateMovies.add("http://dbpedia.org/resource/Miley_Cyrus");
+		candidateMovies.add("http://dbpedia.org/resource/Daft_Punk");
+		candidateMovies.add("http://dbpedia.org/resource/Maroon_5");
+		candidateMovies.add("http://dbpedia.org/resource/Britney_Spears");
+		candidateMovies.add("http://dbpedia.org/resource/U2");
+		candidateMovies.add("http://dbpedia.org/resource/Led_Zeppelin");
+		candidateMovies.add("http://dbpedia.org/resource/The_Rolling_Stones");
+		candidateMovies.add("http://dbpedia.org/resource/Slash_(musician)");
+		candidateMovies.add("http://dbpedia.org/resource/Aerosmith");
+		candidateMovies.add("http://dbpedia.org/resource/Jonas_Brothers");
+		candidateMovies.add("http://dbpedia.org/resource/David_Bowie");
+		candidateMovies.add("http://dbpedia.org/resource/Pearl_Jam");
+		candidateMovies.add("http://dbpedia.org/resource/The_Cure");
+		candidateMovies.add("http://dbpedia.org/resource/Megadeth");
+		candidateMovies.add("http://dbpedia.org/resource/Oasis_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/Marilyn_Manson");
+		candidateMovies.add("http://dbpedia.org/resource/Elvis_Presley");
+		candidateMovies.add("http://dbpedia.org/resource/Kiss_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/The_Smashing_Pumpkins");
+		candidateMovies.add("http://dbpedia.org/resource/Ramones");
+		candidateMovies.add("http://dbpedia.org/resource/Sade_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/Frank_Sinatra");
+		candidateMovies.add("http://dbpedia.org/resource/Vampire_Weekend");
+		candidateMovies.add("http://dbpedia.org/resource/Fergie_(singer)");
+		candidateMovies.add("http://dbpedia.org/resource/Amy_Winehouse");
+		candidateMovies.add("http://dbpedia.org/resource/Van_Halen");
+		candidateMovies.add("http://dbpedia.org/resource/Celine_Dion");
+		candidateMovies.add("http://dbpedia.org/resource/Dream_Theater");
+		candidateMovies.add("http://dbpedia.org/resource/The_Strokes");
+		candidateMovies.add("http://dbpedia.org/resource/Lenny_Kravitz");
+		candidateMovies.add("http://dbpedia.org/resource/The_Eagles_(UK_band)");
+		candidateMovies.add("http://dbpedia.org/resource/Grateful_Dead");
+		candidateMovies.add("http://dbpedia.org/resource/Queens_of_the_Stone_Age");
+		candidateMovies.add("http://dbpedia.org/resource/John_Legend");
+		candidateMovies.add("http://dbpedia.org/resource/Billy_Joel");
+		candidateMovies.add("http://dbpedia.org/resource/Phoenix_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/R.E.M.");
+		candidateMovies.add("http://dbpedia.org/resource/The_Pussycat_Dolls");
+		candidateMovies.add("http://dbpedia.org/resource/Stevie_Wonder");
+		candidateMovies.add("http://dbpedia.org/resource/Ellie_Goulding");
+		candidateMovies.add("http://dbpedia.org/resource/Simon_&_Garfunkel");
+		candidateMovies.add("http://dbpedia.org/resource/Robbie_Williams");
+		candidateMovies.add("http://dbpedia.org/resource/Enya");
+		candidateMovies.add("http://dbpedia.org/resource/Neil_Young");
+		candidateMovies.add("http://dbpedia.org/resource/DragonForce");
+		candidateMovies.add("http://dbpedia.org/resource/Eminem");
+		candidateMovies.add("http://dbpedia.org/resource/Lady_Gaga");
+		candidateMovies.add("http://dbpedia.org/resource/Linkin_Park");
+		candidateMovies.add("http://dbpedia.org/resource/Michael_Jackson");
+		candidateMovies.add("http://dbpedia.org/resource/Pink_Floyd");
+		candidateMovies.add("http://dbpedia.org/resource/Green_Day");
+		candidateMovies.add("http://dbpedia.org/resource/Beyoncé");
+		candidateMovies.add("http://dbpedia.org/resource/Coldplay");
+		candidateMovies.add("http://dbpedia.org/resource/System_of_a_Down");
+		candidateMovies.add("http://dbpedia.org/resource/Tool_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/Adam_Lambert");
+		candidateMovies.add("http://dbpedia.org/resource/Mumford_&_Sons");
+		candidateMovies.add("http://dbpedia.org/resource/Norah_Jones");
+		candidateMovies.add("http://dbpedia.org/resource/The_Black_Keys");
+		candidateMovies.add("http://dbpedia.org/resource/Josh_Groban");
+		candidateMovies.add("http://dbpedia.org/resource/Tom_Waits");
+		candidateMovies.add("http://dbpedia.org/resource/Iron_&_Wine");
+		candidateMovies.add("http://dbpedia.org/resource/Bruce_Springsteen");
+		candidateMovies.add("http://dbpedia.org/resource/Marvin_Gaye");
+		candidateMovies.add("http://dbpedia.org/resource/Bon_Iver");
+		candidateMovies.add("http://dbpedia.org/resource/Jamiroquai");
+		candidateMovies.add("http://dbpedia.org/resource/Paolo_Nutini");
+		candidateMovies.add("http://dbpedia.org/resource/Ray_Charles");
+		candidateMovies.add("http://dbpedia.org/resource/Leonard_Cohen");
+		candidateMovies.add("http://dbpedia.org/resource/Ella_Fitzgerald");
+		candidateMovies.add("http://dbpedia.org/resource/Lauryn_Hill");
+		candidateMovies.add("http://dbpedia.org/resource/Boyce_Avenue");
+		candidateMovies.add("http://dbpedia.org/resource/Kate_Nash");
+		candidateMovies.add("http://dbpedia.org/resource/Sepultura");
+		candidateMovies.add("http://dbpedia.org/resource/Nicole_Scherzinger");
+		candidateMovies.add("http://dbpedia.org/resource/Ricky_Martin");
+		candidateMovies.add("http://dbpedia.org/resource/Dimmu_Borgir");
+		candidateMovies.add("http://dbpedia.org/resource/Jeff_Buckley");
+		candidateMovies.add("http://dbpedia.org/resource/Nina_Simone");
+		candidateMovies.add("http://dbpedia.org/resource/Stevie_Ray_Vaughan");
+		candidateMovies.add("http://dbpedia.org/resource/Nick_Cave_and_the_Bad_Seeds");
+		candidateMovies.add("http://dbpedia.org/resource/Amon_Amarth");
+		candidateMovies.add("http://dbpedia.org/resource/Creedence_Clearwater_Revival");
+		candidateMovies.add("http://dbpedia.org/resource/Jefferson_Airplane");
+		candidateMovies.add("http://dbpedia.org/resource/Sonata_Arctica");
+		candidateMovies.add("http://dbpedia.org/resource/Belle_and_Sebastian");
+		candidateMovies.add("http://dbpedia.org/resource/Annie_Lennox");
+		candidateMovies.add("http://dbpedia.org/resource/Kamelot");
+		candidateMovies.add("http://dbpedia.org/resource/Joss_Stone");
+		candidateMovies.add("http://dbpedia.org/resource/Aretha_Franklin");
+		candidateMovies.add("http://dbpedia.org/resource/Jimmy_Buffett");
+		candidateMovies.add("http://dbpedia.org/resource/Jim_Morrison");
+		candidateMovies.add("http://dbpedia.org/resource/Barbra_Streisand");
+		candidateMovies.add("http://dbpedia.org/resource/Meshuggah");
+		candidateMovies.add("http://dbpedia.org/resource/TLC_(group)");
+		candidateMovies.add("http://dbpedia.org/resource/Kate_Bush");
+		candidateMovies.add("http://dbpedia.org/resource/Mike_Portnoy");
+		candidateMovies.add("http://dbpedia.org/resource/R._Kelly");
+		candidateMovies.add("http://dbpedia.org/resource/Al_Green");
+		candidateMovies.add("http://dbpedia.org/resource/Cat_Stevens");
+		candidateMovies.add("http://dbpedia.org/resource/John_Butler_Trio");
+		candidateMovies.add("http://dbpedia.org/resource/Elliott_Smith");
+		candidateMovies.add("http://dbpedia.org/resource/Lou_Reed");
+		candidateMovies.add("http://dbpedia.org/resource/Nat_King_Cole");
+		candidateMovies.add("http://dbpedia.org/resource/Rod_Stewart");
+		candidateMovies.add("http://dbpedia.org/resource/White_Zombie_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/Girl_Talk_(musician)");
+		candidateMovies.add("http://dbpedia.org/resource/The_Temptations");
+		candidateMovies.add("http://dbpedia.org/resource/Janelle_Monáe");
+		candidateMovies.add("http://dbpedia.org/resource/George_Michael");
+		candidateMovies.add("http://dbpedia.org/resource/Andrew_Bird");
+		candidateMovies.add("http://dbpedia.org/resource/Loreena_McKennitt");
+		candidateMovies.add("http://dbpedia.org/resource/Frank_Zappa");
+		candidateMovies.add("http://dbpedia.org/resource/Tracy_Chapman");
+		candidateMovies.add("http://dbpedia.org/resource/Rhianna_(singer)");
+		candidateMovies.add("http://dbpedia.org/resource/Queensrÿche");
+		candidateMovies.add("http://dbpedia.org/resource/Etta_James");
+		candidateMovies.add("http://dbpedia.org/resource/Rufus_Wainwright");
+		candidateMovies.add("http://dbpedia.org/resource/Wyclef_Jean");
+		candidateMovies.add("http://dbpedia.org/resource/Vanessa_Carlton");
+		candidateMovies.add("http://dbpedia.org/resource/Édith_Piaf");
+		candidateMovies.add("http://dbpedia.org/resource/Herbie_Hancock");
+		candidateMovies.add("http://dbpedia.org/resource/Norman_Cook");
+		candidateMovies.add("http://dbpedia.org/resource/Dio_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/Jessica_Simpson");
+		candidateMovies.add("http://dbpedia.org/resource/Sammy_Adams");
+		candidateMovies.add("http://dbpedia.org/resource/Pet_Shop_Boys");
+		candidateMovies.add("http://dbpedia.org/resource/Nick_Drake");
+		candidateMovies.add("http://dbpedia.org/resource/JoJo_(singer)");
+		candidateMovies.add("http://dbpedia.org/resource/Nick_Cave");
+		candidateMovies.add("http://dbpedia.org/resource/Peter_Bjorn_and_John");
+		candidateMovies.add("http://dbpedia.org/resource/Otis_Redding");
+		candidateMovies.add("http://dbpedia.org/resource/Van_Morrison");
+		candidateMovies.add("http://dbpedia.org/resource/The_Specials");
+		candidateMovies.add("http://dbpedia.org/resource/Electric_Light_Orchestra");
+		candidateMovies.add("http://dbpedia.org/resource/Neil_Diamond");
+		candidateMovies.add("http://dbpedia.org/resource/Pat_Benatar");
+		candidateMovies.add("http://dbpedia.org/resource/Muddy_Waters");
+		candidateMovies.add("http://dbpedia.org/resource/Chaka_Khan");
+		candidateMovies.add("http://dbpedia.org/resource/The_Jackson_5");
+		candidateMovies.add("http://dbpedia.org/resource/Aqua_(band)");
+		candidateMovies.add("http://dbpedia.org/resource/Fear_Factory");
+		candidateMovies.add("http://dbpedia.org/resource/Jamie_Cullum");
+		candidateMovies.add("http://dbpedia.org/resource/Buddy_Holly");
+		candidateMovies.add("http://dbpedia.org/resource/Billy_Idol");
+		candidateMovies.add("http://dbpedia.org/resource/The_Black_Crowes");
+		candidateMovies.add("http://dbpedia.org/resource/John_Denver");
+		candidateMovies.add("http://dbpedia.org/resource/Rick_Astley");
+		candidateMovies.add("http://dbpedia.org/resource/Stratovarius");
+		candidateMovies.add("http://dbpedia.org/resource/Zakk_Wylde");
+		candidateMovies.add("http://dbpedia.org/resource/Manowar");
+		candidateMovies.add("http://dbpedia.org/resource/Soulfly");
+		candidateMovies.add("http://dbpedia.org/resource/Mark_Ronson");
+		candidateMovies.add("http://dbpedia.org/resource/Sam_Cooke");
+		candidateMovies.add("http://dbpedia.org/resource/Roy_Orbison");
+		candidateMovies.add("http://dbpedia.org/resource/Tom_Petty");
+		candidateMovies.add("http://dbpedia.org/resource/Ryan_Adams");
+		candidateMovies.add("http://dbpedia.org/resource/Amos_Lee");
+		candidateMovies.add("http://dbpedia.org/resource/Charles_Mingus");
+		candidateMovies.add("http://dbpedia.org/resource/Yo-Yo_Ma");
+		candidateMovies.add("http://dbpedia.org/resource/Barry_White");
+		candidateMovies.add("http://dbpedia.org/resource/Wynton_Marsalis");
+		candidateMovies.add("http://dbpedia.org/resource/SOJA");
+		candidateMovies.add("http://dbpedia.org/resource/Helloween");
+		candidateMovies.add("http://dbpedia.org/resource/Headhunterz");
+		candidateMovies.add("http://dbpedia.org/resource/Carole_King");
+		candidateMovies.add("http://dbpedia.org/resource/Bob_Weir");
+		candidateMovies.add("http://dbpedia.org/resource/The_Clutch");
+		candidateMovies.add("http://dbpedia.org/resource/Jeff_Beck");
+		candidateMovies.add("http://dbpedia.org/resource/Gov't_Mule");
+		candidateMovies.add("http://dbpedia.org/resource/Edguy");
+		candidateMovies.add("http://dbpedia.org/resource/Sublime_with_Rome");
+		candidateMovies.add("http://dbpedia.org/resource/Marcus_Miller");
+		candidateMovies.add("http://dbpedia.org/resource/Fela_Kuti");
+		candidateMovies.add("http://dbpedia.org/resource/Darren_Hayes");
+		candidateMovies.add("http://dbpedia.org/resource/A._Quincy_Jones");
+		candidateMovies.add("http://dbpedia.org/resource/Joe_Cocker");
+		candidateMovies.add("http://dbpedia.org/resource/Dave_Brubeck");
+		candidateMovies.add("http://dbpedia.org/resource/Warren_Haynes");
+		candidateMovies.add("http://dbpedia.org/resource/Gary_Moore");
+		candidateMovies.add("http://dbpedia.org/resource/Toots_and_the_Maytals");
+		candidateMovies.add("http://dbpedia.org/resource/Buffalo_Springfield");
+		candidateMovies.add("http://dbpedia.org/resource/Joe_Bonamassa");
+		candidateMovies.add("http://dbpedia.org/resource/George_Benson");
 		
 		//removing baseMovies from candidateMovies list
 		//TODO revisar essa logica
@@ -498,6 +607,7 @@ public class Weighing
 			
 			//1st loop: calculates the frequency of each object regard each movie in the user model (outcoming links)
 			for(MovieRating movieRating : movieRatingList) {
+				System.out.println("Calculando peso 1");
 				
 				movieList.add(movieRating.getMovie().getUri());
 				
@@ -520,7 +630,9 @@ public class Weighing
 			
 			//2nd loop: calculates the frequency of each object regard each movie in the user model (incoming links)
 			for(MovieRating movieRating : movieRatingList) {
-				
+				System.out.println("Calculando peso 2");
+
+
 				movieList.add(movieRating.getMovie().getUri());
 				
 				//TODO retorna as triplas em ordem iversa, ou seja, coloca o sujeito como se fosse objeto, 
@@ -543,6 +655,8 @@ public class Weighing
 			
 			//3rd loop: calculates the weight for each property in properties list
 			for(String property : properties) {
+				System.out.println("Calculando peso 1");
+
 				
 				/* TODO melhorar essa forma de resgatar as triplas pelas propriedades, 
 				 		está pegando apenas as triplas em que o subject é um dos filmes da lista */

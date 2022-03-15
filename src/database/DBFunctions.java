@@ -7238,9 +7238,9 @@ public class DBFunctions {
 		List<String> movieListTemp = new ArrayList<String>();
 		try {
 			Connection conn = DBConnection.getConnection();
-			String query = "SELECT movie.uri FROM `lod-gabriela`.movie\r\n" + 
-					"INNER JOIN `lod-gabriela`.movie_rating ON movie_rating.movieid = movie.id\r\n" + 
-					"WHERE movie_rating.userid = ?;";
+			String query = "SELECT artist.uri FROM `lod-gabriela`.artist\r\n" +
+					"INNER JOIN `lod-gabriela`.artist_rating_new ON artist_rating_new.artistid = artist.id\r\n" +
+					"WHERE artist_rating_new.userid = ?;";
 			//NodeUtil.print(query);
 			PreparedStatement ps = conn.prepareStatement(query);
 			ps.setInt(1, user.getUserid());
@@ -7264,9 +7264,13 @@ public class DBFunctions {
 		List<MovieRating> movieRatingsListTemp = new ArrayList<MovieRating>();
 		try {
 			Connection conn = DBConnection.getConnection();
-			String query = "SELECT movie.id, movie.title, movie.uri, movie_rating.rating FROM `lod-gabriela`.movie_rating\r\n" + 
-					"INNER JOIN `lod-gabriela`.movie ON movie_rating.movieid = movie.id\r\n" + 
-					"WHERE movie_rating.userid = ?;";
+			String query = "SELECT artist.id, artist.name, artist.uri, artist_rating_new.rating FROM `lod-gabriela`.artist_rating_new\r\n" +
+					"INNER JOIN `lod-gabriela`.artist ON artist_rating_new.artistid = artist.id\r\n" +
+					"WHERE artist_rating_new.userid = ?;";
+			/*String query_artist = "SELECT artist.id, artist.name, artist.uri, movie_rating.rating FROM `lod-gabriela`.movie_rating\r\n" +
+					"INNER JOIN `lod-gabriela`.movie ON movie_rating.movieid = movie.id\r\n" +
+					"WHERE movie_rating.userid = ?;";*/
+
 			//NodeUtil.print(query);
 			PreparedStatement ps = conn.prepareStatement(query);
 			ps.setInt(1, user.getUserid());

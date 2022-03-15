@@ -1,8 +1,8 @@
 package similarity;
 
-import io.github.parklize.measure.*;
+/*import io.github.parklize.measure.*;
 import node.SimpleTriple;
-import node.SparqlWalk;
+import node.SparqlWalk;*/
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,7 +15,7 @@ import java.util.HashSet;
 
 //import org.apache.jena.rdf.model.Resource;
 
-import io.github.parklize.conf.RESIMConf.PropertyRestriction;
+//import io.github.parklize.conf.RESIMConf.PropertyRestriction;
 
 public class TestingResim2 {
 
@@ -91,14 +91,14 @@ public class TestingResim2 {
 		
 		// DBpedia settings - without giving prefix list, using property patterns instead
 		// it will filter properties which start with ""http://dbpedia.org/ontology"
-		ResourceSimilarityMeasure rsmForDBpedia = new ResourceSimilarityMeasure(PropertyRestriction.SamePropertyPath,
+		/*ResourceSimilarityMeasure rsmForDBpedia = new ResourceSimilarityMeasure(PropertyRestriction.SamePropertyPath,
 																	"http://dbpedia.org/sparql", null, "http://dbpedia.org/ontology/", 
 																	null, null, additionalPropertyList_dbpedia, null);	
 		
 		System.out.println("Start calculating Resim for <http://dbpedia.org/resource/Aladdin_(1992_Disney_film)> and  <http://dbpedia.org/resource/300_(film)>");
 				
 		System.out.println(
-		rsmForDBpedia.getSimilarity("<http://dbpedia.org/resource/Aladdin_(1992_Disney_film)>", "<http://dbpedia.org/resource/300_(film)>", 2));
+		rsmForDBpedia.getSimilarity("<http://dbpedia.org/resource/Aladdin_(1992_Disney_film)>", "<http://dbpedia.org/resource/300_(film)>", 2));*/
 		
 
 	}

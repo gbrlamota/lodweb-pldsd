@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b520f142-c0f5-492c-88e0-db8890c0b04d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/database/DBFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DBFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/IDatabaseConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/IDatabaseConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/DiNoia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/DiNoia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/ESimilarity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/ESimilarity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/SummarizedLDSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/SummarizedLDSD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/SummarizedPLDSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/SummarizedPLDSD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/TestingResim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/TestingResim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/TestingResim2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/TestingResim2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/TestingSimilarityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/TestingSimilarityCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/Weighing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/Weighing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/similarity/WeighingSimilarityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/similarity/WeighingSimilarityCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cosinesimilarity/CosineSimilarity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cosinesimilarity/CosineSimilarity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cosinesimilarity/DocVector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cosinesimilarity/DocVector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cosinesimilarity/FF.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cosinesimilarity/FF.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cosinesimilarity/LuceneCosineSimilarity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cosinesimilarity/LuceneCosineSimilarity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cosinesimilarity/VectorGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cosinesimilarity/VectorGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/ConnectionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/ConnectionDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DBConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DBConnections$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DBConnections$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DBConnections.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DBConnections.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DBFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DBFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/IDatabaseConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/IDatabaseConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/DataInstance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/DataInstance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/DataProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/DataProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/DataProviderIris.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/DataProviderIris.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/DataProviderPaperTissue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/DataProviderPaperTissue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/DataProviderWDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/DataProviderWDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/DataTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/DataTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/DataTransferFlexible.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/DataTransferFlexible.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/DataTransferTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/DataTransferTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/Knn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/Knn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/WekaKNN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/WekaKNN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/knn/WekaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/knn/WekaTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lodweb/LodBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lodweb/LodBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lodweb/LodRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lodweb/LodRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lodweb/ResourceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lodweb/ResourceView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lodweb/ValidationView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lodweb/ValidationView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/login/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/login/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucene/AllTerms.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucene/AllTerms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucene/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucene/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucene/FileIndexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucene/FileIndexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucene/IndexOpener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucene/IndexOpener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucene/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucene/Indexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucene/ListIndexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucene/ListIndexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucene/MyFileFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucene/MyFileFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucene/MyRAMDirectory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucene/MyRAMDirectory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/AUC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/AUC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/AUCString.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/AUCString.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/Accuracy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/Accuracy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/MRR.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/MRR.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/NDCG.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/NDCG.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/NDCGString.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/NDCGString.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/PrecisionAndRecall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/PrecisionAndRecall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/PrecisionAndRecallString.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/PrecisionAndRecallString.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/metric/ReciprocalRank.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/metric/ReciprocalRank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model (1)/HitRate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model (1)/Movie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model (1)/MovieRating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model (1)/OnlineEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model (1)/PropertyWeighting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model (1)/RatingScale.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model (1)/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/HitRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/HitRate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/MovieRating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/MovieRating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/OnlineEvaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/OnlineEvaluation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PropertyWeighting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PropertyWeighting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/RatingScale.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/RatingScale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/Classifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/Classifier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/DateUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/DateUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/DateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/Evaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/Evaluation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/GraphPrediction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/GraphPrediction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/GraphView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/GraphView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/GraphView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/GraphView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/GraphView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/GraphView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/GraphView$NodeColorAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/GraphView$NodeColorAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/GraphView$TextColorAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/GraphView$TextColorAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/GraphView$TreeRootAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/GraphView$TreeRootAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/GraphView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/GraphView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/IConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/IConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/Lodica.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/Lodica.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/LodicaOldVersion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/LodicaOldVersion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/NodeLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/NodeLoad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/NodeOld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/NodeOld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/NodePrediction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/NodePrediction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/NodeUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/NodeUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/SemSim.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/SemSim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/SimpleTriple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/SimpleTriple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/Sparql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/Sparql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/SparqlWalk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/SparqlWalk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/ThreadLod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/ThreadLod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/node/ThreadPredictions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/node/ThreadPredictions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/old/ICATestMO$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/old/ICATestMO$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/old/ICATestMO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/old/ICATestMO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/parser/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parser/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/CBSim.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/CBSim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/DiNoia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/DiNoia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/ESimilarity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/ESimilarity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/EditSimilarity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/EditSimilarity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/LDSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/LDSD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/LDSD_LIT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/LDSD_LIT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/LDSD_LOD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/LDSD_LOD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/LiteralSim.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/LiteralSim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/NodeSim.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/NodeSim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/PLDSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/PLDSD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/Similarity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/Similarity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/SummarizedLDSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/SummarizedLDSD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/SummarizedPLDSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/SummarizedPLDSD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/Testing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/Testing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/TestingResim.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/TestingResim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/TestingResim2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/TestingResim2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/TestingSimilarityCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/TestingSimilarityCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/TextSimilarity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/TextSimilarity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/VSM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/VSM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/VSMSimilarity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/VSMSimilarity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/Weighing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/Weighing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/WeighingSimilarityCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/WeighingSimilarityCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/WeighingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/WeighingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/WuPalmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/WuPalmer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/similarity/WuPalmerOld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/similarity/WuPalmerOld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/LodicaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/LodicaTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tfidf/CosineSimilarity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tfidf/CosineSimilarity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tfidf/DocumentParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tfidf/DocumentParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tfidf/TFIDFCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tfidf/TFIDFCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tfidf/TfIdf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tfidf/TfIdf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tfidf/TfIdfMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tfidf/TfIdfMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/DateUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/DateUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/DateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/EStatistic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/EStatistic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/LiteralUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/LiteralUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/Sorter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Sorter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/Sorter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/Sorter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/StringUtilsNode$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/StringUtilsNode$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/StringUtilsNode$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/StringUtilsNode$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/StringUtilsNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/StringUtilsNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/xml/WriteXMLFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xml/WriteXMLFile.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="20KxUPEzscCqgNJPGqQdWhFVG01" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+  </component>
+  <component name="RunManager" selected="Application.Weighing">
+    <configuration name="DiNoia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="similarity.DiNoia" />
+      <module name="LODWEB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="similarity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Weighing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="similarity.Weighing" />
+      <module name="LODWEB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="similarity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Weighing" />
+        <item itemvalue="Application.DiNoia" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b520f142-c0f5-492c-88e0-db8890c0b04d" name="Changes" comment="" />
+      <created>1635807097265</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635807097265</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/metric/PrecisionAndRecallString.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/metric/PrecisionAndRecallString.java</url>
+          <line>133</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="59" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lodweb_pldsd$Weighing.ic" NAME="Weighing Coverage Results" MODIFIED="1636633170399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>similarity.*</FILTER>
+    </SUITE>
+  </component>
+</project>
